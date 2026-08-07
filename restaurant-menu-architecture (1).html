@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurant System Architecture</title>
+<style>
+  :root {
+    --cream: #F6F1E8;
+    --ink: #2B2620;
+    --clay: #C24A2C;
+    --clay-dark: #8F3520;
+    --sage: #4E6B4B;
+    --sage-light: #E4EBE0;
+    --line: #D9CFBE;
+    --card: #FFFDF9;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 80px 32px;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Georgia', 'Iowan Old Style', serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 780px;
+  }
+
+  .box {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0 2px 6px rgba(43, 38, 32, 0.06);
+    overflow: hidden;
+  }
+
+  /* Client column */
+  .header {
+    background: var(--clay);
+    color: #fff;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    padding: 28px 20px;
+    letter-spacing: 0.5px;
+  }
+
+  .menu {
+    padding: 36px 48px 44px;
+  }
+
+  .category {
+    margin-bottom: 32px;
+  }
+
+  .category:last-child {
+    margin-bottom: 0;
+  }
+
+  .category h3 {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--sage);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 10px;
+    margin: 0 0 14px;
+  }
+
+  .item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 19px;
+    padding: 8px 0;
+    color: var(--ink);
+  }
+
+  .item span:last-child {
+    color: var(--clay-dark);
+    font-weight: 700;
+  }
+
+  @media (max-width: 900px) {
+    .menu { padding: 24px 24px 28px; }
+    .header { font-size: 20px; padding: 22px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Client -->
+  <section class="column">
+    <div class="box">
+      <div class="header">Restaurant Menu</div>
+      <div class="menu">
+        <div class="category">
+          <h3>Momo Items</h3>
+          <div class="item"><span>Veg Momo</span><span>100/-</span></div>
+          <div class="item"><span>Chicken Momo</span><span>150/-</span></div>
+          <div class="item"><span>Buff Momo</span><span>120/-</span></div>
+        </div>
+        <div class="category">
+          <h3>Chowmin Items</h3>
+          <div class="item"><span>Veg Chowmin</span><span>90/-</span></div>
+          <div class="item"><span>Chicken Chowmin</span><span>150/-</span></div>
+          <div class="item"><span>Buff Chowmin</span><span>120/-</span></div>
+          <div class="item"><span>Egg Chowmin</span><span>100/-</span></div>
+        </div>
+        <div class="category">
+          <h3>Drinks</h3>
+          <div class="item"><span>Coca Cola</span><span>150/-</span></div>
+          <div class="item"><span>Sprite</span><span>150/-</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>
